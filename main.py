@@ -10,9 +10,6 @@ led = LED(2)
 led.off()
 button = Button(3)
 print("Setting up")
-print("Motor  Output on Pin: " + led)
-print("Buzzer Output on Pin: " + b)
-print("Button  Input on Pin: " + button)
 
 
 
