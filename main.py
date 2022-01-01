@@ -16,7 +16,7 @@ print("Ready...")
 
 def advmode(currmode):
     global mode
-    if currmode = 4:
+    if currmode >= 4:
         mode = 1
     else
         mode = currmode + 1
