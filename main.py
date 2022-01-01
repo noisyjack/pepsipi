@@ -14,7 +14,7 @@ mode = 1
 print("Ready...")
 
 def beep(num):
-    while num >= 0:
+    while num >= 1:
         b.play(Tone(400))
         sleep(0.5)
         b.stop()
