@@ -10,10 +10,14 @@ led = LED(2)
 led.off()
 actionbutton = Button(3)
 modebutton = Button(14)
+mode = 1
 print("Ready...")
 
 
-
+def advmode(currmode)
+    global mode
+    mode = currmode + 1
+    print('Mode is now ' + str(mode))
 
 def startTones():
     b.play(Tone(222.0))
@@ -47,5 +51,6 @@ def dispense(ml):
 while True:
     if actionbutton.is_pressed:
         dispense(1000)
-    else:
-        print("Button is not pressed")
+    elif:
+        modebutton.is_pressed:
+        advmode(mode)
