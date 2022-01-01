@@ -73,7 +73,7 @@ def calibrate():
 def update():
 
 
-    subprocess.run(["updater.sh"])
+    subprocess.run(["sh ./updater.sh"])
     sys.exit(0)
 
     sleep(0.5)
