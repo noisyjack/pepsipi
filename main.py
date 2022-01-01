@@ -4,6 +4,8 @@ from gpiozero import Buzzer
 from gpiozero import TonalBuzzer
 from gpiozero.tones import Tone
 from gpiozero import Button
+import subprocess
+import sys
 print("Setting up")
 b = TonalBuzzer(17)
 led = LED(2)
@@ -69,7 +71,11 @@ def calibrate():
     sleep(0.5)
 
 def update():
-    print("Update not currently implemented returning:")
+
+
+    subprocess.run(["updater.sh")
+    sys.exit(0)
+
     sleep(0.5)
 
 
