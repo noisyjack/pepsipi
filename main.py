@@ -15,10 +15,10 @@ print("Ready...")
 
 def beep(num):
     while num >= 1:
+        sleep(0.15)
         b.play(Tone(400))
         sleep(0.15)
         b.stop()
-        sleep(0.15)
         num -=1
 
 def advmode(currmode):
