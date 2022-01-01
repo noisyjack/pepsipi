@@ -16,10 +16,12 @@ print("Ready...")
 
 def advmode(currmode):
     global mode
-    mode = currmode + 1
+    if currmode = 4:
+        mode = 1
+    else
+        mode = currmode + 1
     print('Mode is now ' + str(mode))
     sleep(0.5)
-
 
 def startTones():
     b.play(Tone(222.0))
@@ -50,8 +52,34 @@ def dispense(ml):
     endTones()
     print("Dispense Complete")
 
+def clean():
+    print("Clean not currently implemented returning:")
+
+def calibrate():
+    print("Calibrate not currently implemented returning:")
+
+def update():
+    print("Update not currently implemented returning:")
+
+
+def performaction():
+    if mode = 1:
+        print("Mode is dispense")
+        dispense(1000)
+    elif mode = 2:
+        print("Mode is clean")
+        clean()
+    elif mode = 3:
+        print("Mode is calibrate")
+        calibrate()
+    elif mode = 4:
+        print("Mode is update")
+        update()
+    else:
+        print("Error! Unknown Mode")
+
 while True:
     if actionbutton.is_pressed:
-        dispense(1000)
+        performaction()
     elif modebutton.is_pressed:
         advmode(mode)
