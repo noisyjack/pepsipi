@@ -45,4 +45,4 @@ def dispense(ml):
     print("Dispense Complete")
 
 while True:
-    actionbutton.when_pressed = dispense(1000)
+    actionbutton.when_released = dispense(1000)
