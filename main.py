@@ -94,13 +94,13 @@ def performaction():
         print("Mode is " + mode_friendlynames[mode])
         dispense(40)
     elif mode == 2:
-        print("Mode is clean")
+        print("Mode is " + mode_friendlynames[mode])
         clean()
     elif mode == 3:
-        print("Mode is calibrate")
+        print("Mode is " + mode_friendlynames[mode])
         calibrate()
     elif mode == 4:
-        print("Mode is update")
+        print("Mode is " + mode_friendlynames[mode])
         update()
     else:
         print("Error! Unknown Mode")
