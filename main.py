@@ -43,6 +43,6 @@ def dispense(ml):
     endTones()
     print("Dispense Complete")
 
-while true:
+while True:
     button.wait_for_press()
     dispense(1000)
