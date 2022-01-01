@@ -62,8 +62,18 @@ def dispense(ml):
     print("Dispense Complete")
 
 def clean():
-    print("Clean not currently implemented returning:")
-    sleep(0.5)
+    print("Cleaning Process Started, Press to End:")
+    sleep(0.25)
+    startTones()
+    led.on()
+    actionbutton.wait_for_press()
+    led.off()
+    endTones()
+    print("Cleaning Complete")
+    sleep(0.25)
+    print("Returning to Dispense Mode")
+    global mode
+    mode = 1
 
 def calibrate():
     print("Calibrate not currently implemented returning:")
