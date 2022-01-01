@@ -14,7 +14,7 @@ mode = 1
 print("Ready...")
 
 
-def advmode(currmode)
+def advmode(currmode):
     global mode
     mode = currmode + 1
     print('Mode is now ' + str(mode))
