@@ -51,6 +51,6 @@ def dispense(ml):
 while True:
     if actionbutton.is_pressed:
         dispense(1000)
-    elif:
+    elif
         modebutton.is_pressed:
         advmode(mode)
