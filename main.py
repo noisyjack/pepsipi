@@ -18,6 +18,8 @@ def advmode(currmode):
     global mode
     mode = currmode + 1
     print('Mode is now ' + str(mode))
+    sleep(0.5)
+
 
 def startTones():
     b.play(Tone(222.0))
