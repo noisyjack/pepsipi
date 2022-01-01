@@ -50,9 +50,10 @@ def endTones():
     b.stop()
 
 def dispense(ml):
+    global pumpdispense
     print("Dispensing:")
     print(ml)
-    dispensetime = 60(ml/pumpdispense)
+    dispensetime = 60*(ml/pumpdispense)
     startTones()
     led.on()
     sleep(dispensetime)
@@ -80,7 +81,7 @@ def update():
 def performaction():
     if mode == 1:
         print("Mode is dispense")
-        dispense(1000)
+        dispense(40)
     elif mode == 2:
         print("Mode is clean")
         clean()
