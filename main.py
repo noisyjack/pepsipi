@@ -63,16 +63,16 @@ def update():
 
 
 def performaction():
-    if mode = 1:
+    if mode == 1:
         print("Mode is dispense")
         dispense(1000)
-    elif mode = 2:
+    elif mode == 2:
         print("Mode is clean")
         clean()
-    elif mode = 3:
+    elif mode == 3:
         print("Mode is calibrate")
         calibrate()
-    elif mode = 4:
+    elif mode == 4:
         print("Mode is update")
         update()
     else:
