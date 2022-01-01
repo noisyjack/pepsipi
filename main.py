@@ -4,12 +4,13 @@ from gpiozero import Buzzer
 from gpiozero import TonalBuzzer
 from gpiozero.tones import Tone
 from gpiozero import Button
-
+print("Setting up")
 b = TonalBuzzer(17)
 led = LED(2)
 led.off()
 button = Button(3)
-print("Setting up")
+print("Ready...")
+
 
 
 
@@ -29,6 +30,7 @@ def endTones():
     b.stop()
 
 def dispense(ml):
+    print("Dispensing:")
     print(ml)
     startTones()
     led.on()
@@ -39,7 +41,8 @@ def dispense(ml):
     sleep(1)
     led.off()
     endTones()
-    print(ml)
+    print("Dispense Complete")
 
-button.wait_for_press()
-dispense(1000)
+while true:
+    button.wait_for_press()
+    dispense(1000)
