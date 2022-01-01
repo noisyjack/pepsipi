@@ -9,6 +9,7 @@ b = TonalBuzzer(17)
 led = LED(2)
 led.off()
 actionbutton = Button(3)
+modebutton = Button(14)
 print("Ready...")
 
 
@@ -44,5 +45,4 @@ def dispense(ml):
     print("Dispense Complete")
 
 while True:
-    actionbutton.wait_for_press()
-    dispense(1000)
+    actionbutton.when_pressed = dispense(1000)
