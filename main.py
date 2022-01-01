@@ -29,7 +29,7 @@ def endTones():
     b.stop()
 
 def dispense(ml):
-    print(ml + "ml dispensing")
+    print(ml)
     startTones()
     led.on()
     sleep(1)
@@ -39,7 +39,7 @@ def dispense(ml):
     sleep(1)
     led.off()
     endTones()
-    print(ml + "ml dispense complete")
+    print(ml)
 
 button.wait_for_press()
 dispense(1000)
