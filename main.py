@@ -12,7 +12,6 @@ actionbutton = Button(3)
 modebutton = Button(14)
 mode = 1
 print("Ready...")
-beep(2)
 
 def beep(num):
     while num >= 0:
@@ -89,6 +88,8 @@ def performaction():
         update()
     else:
         print("Error! Unknown Mode")
+
+beep(2)
 
 while True:
     if actionbutton.is_pressed:
