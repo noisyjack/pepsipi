@@ -54,12 +54,15 @@ def dispense(ml):
 
 def clean():
     print("Clean not currently implemented returning:")
+    sleep(0.5)
 
 def calibrate():
     print("Calibrate not currently implemented returning:")
+    sleep(0.5)
 
 def update():
     print("Update not currently implemented returning:")
+    sleep(0.5)
 
 
 def performaction():
