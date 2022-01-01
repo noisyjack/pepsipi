@@ -18,7 +18,7 @@ def advmode(currmode):
     global mode
     if currmode >= 4:
         mode = 1
-    else
+    else:
         mode = currmode + 1
     print('Mode is now ' + str(mode))
     sleep(0.5)
