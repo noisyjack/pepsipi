@@ -12,7 +12,15 @@ actionbutton = Button(3)
 modebutton = Button(14)
 mode = 1
 print("Ready...")
+beep(2)
 
+def beep(num):
+    while num >= 0:
+        b.play(Tone(400))
+        sleep(0.5)
+        b.stop()
+        sleep(0.5)
+        num -=1
 
 def advmode(currmode):
     global mode
@@ -21,6 +29,7 @@ def advmode(currmode):
     else:
         mode = currmode + 1
     print('Mode is now ' + str(mode))
+    beep(mode)
     sleep(0.5)
 
 def startTones():
