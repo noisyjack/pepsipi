@@ -15,7 +15,7 @@ modebutton = Button(14)                 # Pin with Mode Button Attached (mode ch
 mode = 1
 pumpdispense = 150                      # Pump dispense volume in 60s
 print("Ready...")
-
+mode_friendlynames = ["NA", "Dispense", "Clean", "Calibrate", "Update"]
 def beep(num):
     while num >= 1:
         sleep(0.15)
@@ -26,11 +26,12 @@ def beep(num):
 
 def advmode(currmode):
     global mode
+    global mode_friendlynames
     if currmode >= 4:
         mode = 1
     else:
         mode = currmode + 1
-    print('Mode is now ' + str(mode))
+    print('Mode is now ' + mode_friendlynames[mode])
     beep(mode)
     sleep(0.5)
 
@@ -90,7 +91,7 @@ def update():
 
 def performaction():
     if mode == 1:
-        print("Mode is dispense")
+        print("Mode is " + mode_friendlynames[mode])
         dispense(40)
     elif mode == 2:
         print("Mode is clean")
