@@ -8,7 +8,7 @@ import subprocess
 import sys
 print("Setting up")
 b = TonalBuzzer(17)
-led = LED(2)
+led = LED(21)
 led.off()
 actionbutton = Button(3)
 modebutton = Button(14)
