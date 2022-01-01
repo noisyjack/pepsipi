@@ -7,12 +7,13 @@ from gpiozero import Button
 import subprocess
 import sys
 print("Setting up")
-b = TonalBuzzer(17)
-led = LED(21)
+b = TonalBuzzer(17)                     # Pin with Buzzer attached
+led = LED(21)                           # Pin with Dispensor Motor Attached
 led.off()
-actionbutton = Button(3)
-modebutton = Button(14)
+actionbutton = Button(3)                # Pin with Action Button Attached (dispense / update ect)
+modebutton = Button(14)                 # Pin with Mode Button Attached (mode change ect)
 mode = 1
+pumpdispense = 150                      # Pump dispense volume in 60s
 print("Ready...")
 
 def beep(num):
@@ -51,13 +52,10 @@ def endTones():
 def dispense(ml):
     print("Dispensing:")
     print(ml)
+    dispensetime = 60(ml/pumpdispense)
     startTones()
     led.on()
-    sleep(1)
-    led.off()
-    sleep(1)
-    led.on()
-    sleep(1)
+    sleep(dispensetime)
     led.off()
     endTones()
     print("Dispense Complete")
