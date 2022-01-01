@@ -45,4 +45,7 @@ def dispense(ml):
     print("Dispense Complete")
 
 while True:
-    actionbutton.when_released = dispense(1000)
+    if actionbutton.is_pressed:
+        dispense(1000)
+    else:
+        print("Button is not pressed")
